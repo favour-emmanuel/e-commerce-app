@@ -4,7 +4,6 @@ import { useCart } from "../context/CartContext";
 const Receipt = () => {
   const { cart } = useCart();
 
-  // Calculate the total price of the cart
   const total = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
 
   return (

@@ -23,13 +23,13 @@ const LandingPage = () => {
     <div className="px-4 lg:px-10 py-4 lg:py-12">
       <div className="flex justify-between">
         <div>
-          <h1 className="font-extrabold text-5xl text-appNavy">
+          <h1 className="font-extrabold md:text-5xl text-4xl text-appNavy">
             Welcome 👋 to <span className="text-appPurple">didi stores</span>
           </h1>
           <p className="text-lg my-3">
             Your home of accessories and amazing products
           </p>
-          <button className="bg-appPurple text-appWhite my-3 py-3 px-3.5 rounded-lg w-full max-w-[9rem]">
+          <button className="bg-appPurple text-appWhite my-3 py-3 px-3.5 rounded-lg w-full max-w-[9rem] hover:bg-[#3c38bb]">
             Shop Now
           </button>
         </div>
