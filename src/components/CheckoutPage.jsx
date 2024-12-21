@@ -14,15 +14,22 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className="py-5">
-      <h1 className="md:text-4xl text-4xl font-extrabold mb-4 text-appNavy">
-        Ready to buy ? Checkout
-      </h1>
+    <div className="px-5 lg:px-10 py-5 lg:py-8">
+      <div className="my-10 items-center">
+        <h3 className="text-appPurple text-lg font-bold mb-2">Ready to buy?</h3>
+        <h1 className="md:text-5xl text-4xl font-extrabold mb-4 text-appNavy flex items-center gap-3">
+          Checkout{" "}
+          <span className="text-2xl">
+            <Icon icon="line-md:arrow-right" />
+          </span>
+        </h1>
+      </div>
+
       {isPaid ? (
         <Receipt />
       ) : (
         <>
-          <div className="space-y-4">
+          <div className="space-y-4 mt-10">
             {cart.map((item) => (
               <div
                 key={item.id}
@@ -63,13 +70,13 @@ const CheckoutPage = () => {
               </div>
             ))}
           </div>
-          <div className="mt-4 text-xl font-bold text-appPurple">
+          <div className="text-xl font-bold text-appPurple mt-12">
             Total: ${total}
           </div>
           <div className="flex justify-center">
             <button
               onClick={handlePayment}
-              className="bg-appPurple text-white p-3 rounded-full w-full max-w-[30rem]  mt-4 hover:bg-appWhite hover:text-appPurple"
+              className="bg-appPurple text-white p-3 rounded-full w-full max-w-[30rem] duration-300 transition-all  mt-4 hover:bg-appWhite hover:text-appPurple"
             >
               Pay Now
             </button>

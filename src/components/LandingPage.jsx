@@ -20,7 +20,7 @@ const LandingPage = () => {
   }, {});
 
   return (
-    <div className="px-4 lg:px-10 py-4 lg:py-12">
+    <div className="px-5 lg:px-10 py-5 lg:py-12">
       <div className="flex justify-between">
         <div>
           <h1 className="font-extrabold md:text-5xl text-4xl text-appNavy">
@@ -33,11 +33,6 @@ const LandingPage = () => {
             Shop Now
           </button>
         </div>
-        {/* <ul className="flex lg:flex-row items-center gap-3">
-          <li>Shop All</li>
-          <li>Male</li>
-          <li>Female</li>
-        </ul> */}
       </div>
       <div className="mt-10">
         {Object.keys(groupedProducts).map((category) => (
@@ -52,12 +47,14 @@ const LandingPage = () => {
         ))}
       </div>
 
-      <footer className="py-3 lg:mt-20 mt-7 border-t border-appPurple/30">
+      <footer className="py-3 lg:mt-24 mt-7 border-t border-appPurple/30">
         <div className="flex justify-between items-center my3">
           <h4 className="text-xl font-extrabold text-appPurple">
             Didi's Store
           </h4>
-          <p className="text-sm text-appNavy">© 2024 All Rights Reserved</p>
+          <p className="text-[15.6px] font-semibold text-appNavy">
+            © 2024 All Rights Reserved
+          </p>
         </div>
       </footer>
     </div>
