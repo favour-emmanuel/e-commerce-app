@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mulish: ["Mulish"],
+      },
+      colors: {
+        appNavy: "#0F172A",
+        appWhite: "#ececfa",
+        appPurple: "#651FFF",
+      },
+    },
   },
   plugins: [],
 };
