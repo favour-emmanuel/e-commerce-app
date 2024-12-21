@@ -7,9 +7,9 @@ const Receipt = () => {
   const total = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
 
   return (
-    <div className="p-4 border rounded-lg shadow-lg max-w-2xl mx-auto mt-8">
-      <h2 className="text-2xl font-bold mb-4">Receipt</h2>
-      <div className="space-y-4">
+    <div className="p-4 border border-appPurple/45 rounded-lg shadow-lg max-w-2xl mx-auto mt-8">
+      <h2 className="text-3xl font-bold mb-4 text-appPurple">Receipt</h2>
+      <div className="space-y-4 my-3">
         {cart.map((item) => (
           <div key={item.id} className="flex justify-between items-center">
             <div className="flex flex-col">
@@ -29,8 +29,8 @@ const Receipt = () => {
       </div>
       <div className="mt-6 border-t pt-4">
         <div className="flex justify-between text-lg font-semibold">
-          <span>Total:</span>
-          <span>${total.toFixed(2)}</span>
+          <span className="font-bold text-xl">Total:</span>
+          <span className="font-bold text-xl">${total.toFixed(2)}</span>
         </div>
       </div>
     </div>

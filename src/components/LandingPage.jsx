@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
@@ -29,9 +30,11 @@ const LandingPage = () => {
           <p className="text-lg my-3">
             Your home of accessories and amazing products
           </p>
-          <button className="bg-appPurple text-appWhite my-3 py-3 px-3.5 rounded-lg w-full max-w-[9rem] hover:bg-[#3c38bb]">
-            Shop Now
-          </button>
+          <Link to={"/checkout"}>
+            <button className="bg-appPurple text-appWhite my-3 py-3 px-3.5 rounded-lg w-full max-w-[9rem] hover:bg-[#3c38bb]">
+              Shop Now
+            </button>
+          </Link>
         </div>
       </div>
       <div className="mt-10">

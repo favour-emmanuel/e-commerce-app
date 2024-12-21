@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import Receipt from "./Receipt";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Link } from "react-router-dom";
 
 const CheckoutPage = () => {
   const { cart, removeFromCart, updateQuantity } = useCart();
@@ -15,7 +16,16 @@ const CheckoutPage = () => {
 
   return (
     <div className="px-5 lg:px-10 py-5 lg:py-8">
-      <div className="my-10 items-center">
+      <Link to={"/"}>
+        <p className="flex items-center text-sm gap-2 hover:text-appPurple/90">
+          Go back to Home{" "}
+          <Icon
+            icon="material-symbols-light:home-outline-rounded"
+            className="text-2xl text-appPurple"
+          />
+        </p>
+      </Link>
+      <div className="my-12 items-center">
         <h3 className="text-appPurple text-lg font-bold mb-2">Ready to buy?</h3>
         <h1 className="md:text-5xl text-4xl font-extrabold mb-4 text-appNavy flex items-center gap-3">
           Checkout{" "}
